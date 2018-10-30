@@ -6,3 +6,9 @@
 /packages
 /Api/bin
 /Api/obj/Debug
+/Dal/bin/Debug
+/Dal/obj/Debug
+/Data/bin/Debug
+/Data/obj/Debug
+/Lib/bin/Debug
+/Lib/obj/Debug
