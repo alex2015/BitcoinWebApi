@@ -8,14 +8,13 @@ namespace Lib
 {
     public class BitcoinService : IBitcoinService
     {
-        public bool UseTestnet { get; set; }
         public BitcoinParameters Parameters { get; }
 
-        public BitcoinService(bool useTestnet)
+        public BitcoinService()
         {
             Parameters = new BitcoinParameters(null, null, null, null, 0)
             {
-                UseTestnet = useTestnet
+                UseTestnet = true
             };
         }
     }
