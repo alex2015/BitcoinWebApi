@@ -7,14 +7,15 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using Data;
 using Lib;
+using Lib.Services.Coins.Base;
 
 namespace Api.Controllers
 {
     public class BitcoinController : ApiController
     {
-        private readonly IBitcoinService service;
+        private readonly ICoinService service;
 
-        public BitcoinController(IBitcoinService service)
+        public BitcoinController(ICoinService service)
         {
             this.service = service;
         }

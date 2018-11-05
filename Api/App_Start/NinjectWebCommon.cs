@@ -2,6 +2,9 @@
 using System.Web;
 using Api;
 using Lib;
+using Lib.RPC.Connector;
+using Lib.Services.Coins.Base;
+using Lib.Services.Coins.Bitcoin;
 using Microsoft.Web.Infrastructure.DynamicModuleHelper;
 using Ninject;
 using Ninject.Web.Common;
@@ -48,8 +51,7 @@ namespace Api
 
         private static void RegisterServices(IKernel kernel)
         {
-            kernel.Bind<IBitcoinService>().To<BitcoinService>().InRequestScope();
-            kernel.Bind<IRpcConnector>().To<RpcConnector>().InRequestScope();
+            kernel.Bind<ICoinService>().To<BitcoinService>().InRequestScope();
         }
     }
 }
